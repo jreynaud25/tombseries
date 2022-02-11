@@ -8,7 +8,6 @@ import { getCart } from "../utils/Cart";
 
 
 export default function Home({products}) {
-  console.log( {products} )
   return (
     <div className={styles.container}>
       <Head>
@@ -43,7 +42,7 @@ export default function Home({products}) {
 
         return (
           
-          <div>
+          <div key={product.key} value={product}>
             <h1>{product.title}</h1>
             <p>{product.description}</p>
             <p>{product.variants[0].price}</p>
